@@ -1,7 +1,14 @@
-export default function Page() {
+import Link from "next/link";
+import { photos } from "./data";
+
+export default function Home() {
   return (
-    <div className="p-10 mt-6 bg-sky-600 text-white rounded-xl">
-      Hello, App1!
-    </div>
+    <main className="flex flex-row flex-wrap">
+      {photos.map(({ id, src }) => (
+        <Link key={id} href={`/photo/${id}`}>
+          <img width={200} height={200} src={src} className="m-1" />
+        </Link>
+      ))}
+    </main>
   );
 }
