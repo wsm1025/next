@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export async function GET(request, { params }) {
+export async function GET(request: any, { params }: any) {
   const field = request.nextUrl.searchParams.get("dataField");
   const data = await (
     await fetch(

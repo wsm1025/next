@@ -9,7 +9,7 @@ export async function GET() {
   return NextResponse.json({ data });
 }
 
-export async function POST(request: { json: () => any }) {
+export async function POST(request: any) {
   const article = await request.json();
 
   return NextResponse.json(

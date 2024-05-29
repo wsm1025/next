@@ -10,7 +10,7 @@ import { NextResponse } from "next/server";
 //   matcher: "/dashboard/:path*",
 // };
 
-export function middleware(request) {
+export function middleware(request: any) {
   // 假设传入的请求 header 里 "Cookie:nextjs=fast"
   let cookie = request.cookies.get("nextjs");
   console.log(cookie); // => { name: 'nextjs', value: 'fast', Path: '/' }
