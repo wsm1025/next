@@ -1,4 +1,5 @@
 import Count from "./components/count";
+import One from "./components/one";
 export default async function Page() {
   const res = await fetch("http://taizonga.top:3333/api/public/getBase");
   const data = await res.json();
@@ -10,6 +11,7 @@ export default async function Page() {
         })}
       </ul>
       <Count />
+      <One />
     </>
   );
 }
